@@ -112,35 +112,16 @@ const divideNumbers = () => {
 document.getElementById("divideNumbers").addEventListener("click", divideNumbers);
 
 /* Decision Structure */
-//Declare and instantiate a variable that stores the numeric value entered by the user in the subtotal field
-// const getSubTotal = function() {
-//     let userSubTotal = Number(document.getElementById("subtotal").value);
-//     console.log(userSubTotal);
-
-//     //Check IF the membership checkbox has been checked by the user to apply a 15% discount to the subtotal amount.
-//     if (document.getElementById("member").checked) {
-//         let discount = userSubTotal * .15;
-//         userSubTotal = userSubTotal - discount;
-//         console.log(userSubTotal);
-//     }
-//     return userSubTotal;
-// }
-let userSubTotal = Number(document.getElementById("subtotal").textContent);
-console.log(userSubTotal);
-if (document.getElementById("member").checked) {
-    let discount = userSubTotal * .15;
-    userSubTotal = userSubTotal - discount;
-    console.log(userSubTotal);
-}
-
-//Output the total to the the total span in the format shown with two decimals using a template string.
-
-// const totalSpan = document.getElementById("getTotal");
-// console.log(totalSpan);
-// totalSpan.addEventListener("click", getSubTotal);
-// document.querySelector("#total").innerHTML = `$${totalSpan.toFixed(2)}`;
 
 document.getElementById("getTotal").addEventListener("click", function() {
+    let userSubTotal = Number(document.getElementById("subtotal").value);
+    console.log(userSubTotal);
+    if (document.getElementById("member").checked) {
+        let discount = userSubTotal * .20;  //instructions say 15%, rubric says 20%
+        userSubTotal = userSubTotal - discount;
+        console.log(userSubTotal);
+    }
+    
     document.getElementById("total").innerHTML = `$${userSubTotal.toFixed(2)}`;
 });
 
