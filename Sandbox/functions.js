@@ -86,3 +86,5 @@ const items = [
 //     26: ['Kyle'],
 //     31: ['John'],
 //   }
+
+//examples for map and 

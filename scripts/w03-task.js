@@ -153,5 +153,6 @@ const multBy2 = numbersArray.map(number => number * 2);
 document.getElementById("multiplied").innerHTML = multBy2;
 
 /* Output Sum of Multiplied by 2 Array */
-const sumOfMult = multBy2.reduce ((subtotal, number) => subtotal + number);
+// const sumOfMult = multBy2.reduce ((subtotal, number) => subtotal + number);
+const sumOfMult = numbersArray.map(number => number * 2).reduce((subtotal, number) => subtotal + number);
 document.getElementById("sumOfMultiplied").innerHTML = sumOfMult;
