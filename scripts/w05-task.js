@@ -5,7 +5,7 @@ let templesElement = document.getElementById('temples');
 let templeList = [];
 
 /* async displayTemples Function */
-const displayTemples  = (temples) => {   //pass in an array of objects, within this scope referred to as temples
+ const displayTemples  = (temples) => {   //pass in an array of objects, within this scope referred to as temples
     console.log(temples);
     console.log(templesElement);
     console.log("displayTemples start->")
@@ -18,8 +18,7 @@ const displayTemples  = (temples) => {   //pass in an array of objects, within t
         imgElement.setAttribute('alt', temple.location);
         article.appendChild(h3Element);
         article.appendChild(imgElement);
-        templesElement.appendChild(article);   
-            
+        templesElement.appendChild(article);               
     });
     console.log("after forEach in displayTemples");
     console.log(templesElement); 
