@@ -35,17 +35,17 @@ const getTemples = async () => {      //pass in zero parameters, just do somethi
 }
 
 /* reset Function */
-const reset = (temples) => {              //pass in html collection (not array), remove child elements
-    let parent = document.getElementById("temples");  //one element with ID temples
-    console.log("temples (reset):  " + temples);
+const reset = (templesElement) => {              //pass in html collection (not array), remove child elements
+    // let parent = document.getElementById("temples");  //one element with ID temples
+    // console.log("temples (reset):  " + temples);
     
-    let child = parent.getElementsByTagName('article');
-    // let gchild = parent.child.querySelector('h3');
-    console.log("child(reset) : " + child);
-    parent.remove(child);   //removeChild did not work.
-    // child.remove(gchild);
-    console.log("child2 (reset) : " + child);
-    console.log("temples Element (reset) : " + templesElement);
+    // let child = parent.getElementsByTagName('article');
+    // // let gchild = parent.child.querySelector('h3');
+    // console.log("child(reset) : " + child);
+    // parent.remove(child);   //removeChild did not work.
+    // // child.remove(gchild);
+    // console.log("child2 (reset) : " + child);
+    // console.log("temples Element (reset) : " + templesElement);
     templesElement.innerHTML = "";    
 }
 
