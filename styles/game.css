@@ -1,0 +1,74 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1, h2 {
+    text-align: center;
+    margin:1rem 0 .5rem;
+}
+
+div {
+    display:block;            
+    text-align: center;
+    color:#4e6096;
+}
+
+div #container {
+    width: 825px;   
+    max-width: 80%;
+}
+div #header {
+    display: block;
+    color:lightblue;
+
+}
+
+div #question {
+    /* display: inline-flex;   */
+}
+
+div .answers {
+    /* display:grid; */
+    width: 80%;        
+    
+}
+
+div #announce {
+    display:flexbox;    
+}
+
+
+
+.myButton {
+	box-shadow: 0px 0px 0px 2px #9fb4f2;
+	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	background-color:#7892c2;
+	border-radius:10px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:19px;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+	background-color:#476e9e;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.button-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.button-answer {
+
+}
