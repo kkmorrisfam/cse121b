@@ -1,0 +1,125 @@
+{
+    "response_code": 0,
+    "results": [
+      {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "General Knowledge",
+        "question": "The likeness of which president is featured on the rare $2 bill of USA currency?",
+        "correct_answer": "Thomas Jefferson",
+        "incorrect_answers": [
+          "Martin Van Buren",
+          "Ulysses Grant",
+          "John Quincy Adams"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "General Knowledge",
+        "question": "What is the famous Papa John&#039;s last name?",
+        "correct_answer": "Schnatter",
+        "incorrect_answers": [
+          "Chowder",
+          "Williams",
+          "ANDERSON"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "General Knowledge",
+        "question": "According to Sherlock Holmes, &quot;If you eliminate the impossible, whatever remains, however improbable, must be the...&quot;",
+        "correct_answer": "Truth",
+        "incorrect_answers": [
+          "Answer",
+          "Cause",
+          "Source"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "General Knowledge",
+        "question": "What is the French word for &quot;fish&quot;?",
+        "correct_answer": "poisson",
+        "incorrect_answers": [
+          "fiche",
+          "escargot",
+          "mer"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "General Knowledge",
+        "question": "The Flag of the European Union has how many stars on it?",
+        "correct_answer": "12",
+        "incorrect_answers": [
+          "10",
+          "14",
+          "16"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "General Knowledge",
+        "question": "How many colors are there in a rainbow?",
+        "correct_answer": "7",
+        "incorrect_answers": [
+          "8",
+          "9",
+          "10"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "General Knowledge",
+        "question": "What is Cynophobia the fear of?",
+        "correct_answer": "Dogs",
+        "incorrect_answers": [
+          "Birds",
+          "Flying",
+          "Germs"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "General Knowledge",
+        "question": "The Canadian $1 coin is colloquially known as a what?",
+        "correct_answer": "Loonie",
+        "incorrect_answers": [
+          "Boolie",
+          "Foolie",
+          "Moodie"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "General Knowledge",
+        "question": "Area 51 is located in which US state?",
+        "correct_answer": "Nevada",
+        "incorrect_answers": [
+          "Arizona",
+          "New Mexico",
+          "Utah"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "General Knowledge",
+        "question": "What zodiac sign is represented by a pair of scales?",
+        "correct_answer": "Libra",
+        "incorrect_answers": [
+          "Aries",
+          "Capricorn",
+          "Sagittarius"
+        ]
+      }
+    ]
+  }

@@ -25,6 +25,7 @@ div #header {
 
 div #question {
     /* display: inline-flex;   */
+    width: 90%;
 }
 
 div .answers {
@@ -69,6 +70,6 @@ div #announce {
     align-content: center;
 }
 
-.button-answer {
+/* .button-answer {
 
-}
+} */
