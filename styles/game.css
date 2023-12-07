@@ -13,7 +13,7 @@ div {
     color:#4e6096;
 }
 
-div #container {
+div #container {    
     width: 825px;   
     max-width: 80%;
 }
@@ -26,6 +26,7 @@ div #header {
 div #question {
     /* display: inline-flex;   */
     width: 90%;
+    /* justify-content: center; */
 }
 
 div .answers {
