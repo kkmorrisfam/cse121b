@@ -28,9 +28,9 @@ const choiceElement4 = document.getElementById('btn4');
 
 
 // let results = null;
-// let url = "https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple";  //currently just pulling 10 questions.
+let url = "https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple";  //currently just pulling 10 questions.
 // url for testing
-let url = "games.json";  //test with this because the site only allows so many requests per day, and I don't know how to limit calls during testing
+// let url = "games.json";  //test with this because the site only allows so many requests per day, and I don't know how to limit calls during testing
 
 const getTrivia = async (url) => {      //pass in url parameters, just do something, but use async and await
     
@@ -41,11 +41,6 @@ const getTrivia = async (url) => {      //pass in url parameters, just do someth
     
     startGame();  // do this here so that it doesn't "start" until we have api data
 }
-
-//sift through results
-// get questions at position 0-9 in array: 0:question
-// 0:correct_answer
-// 0:incorrect_answers[0,1,2]
 
 function mapQuestions(data) {
     //create a new array with map; question + 4 answers in random order where one is correct
@@ -83,54 +78,18 @@ function displayQuestions(currentQuestion) {
 
 }
 
-// function getChoice() {
-//     Array.from(buttonsCollection).forEach( (button) => {           
-//         console.log("forEach" + amountCorrect);
-
-//         console.log(button);
-        
-//         button.addEventListener('click', function() {  
-//             // console.log(this.value);          
-//             if (this.value == currentQuestion.answer) {
-//                 // amountCorrect ++;
-//                 amountCorrect = amountCorrect + 1;
-//                 answerElement.innerHTML = correctHTML;
-//                 console.log("e-click" + amountCorrect);
-                                
-//             } else {
-//                 answerElement.innerHTML = incorrectHTML;                
-//             };
-            
-//             //not the best option, but works for now
-//             reset(choiceElement1);
-//             reset(choiceElement2);
-//             reset(choiceElement3);
-//             reset(choiceElement4);
-            
-//         });
-//         console.log("after e-click" + amountCorrect);
-//     }); 
-// }
 
 function getChoice() {
     Array.from(buttonsCollection).forEach( (button) => {           
-        console.log("forEach" + amountCorrect);
-
-        console.log(button);
-        
-        button.addEventListener('click', checkChoice) 
-        
+        button.addEventListener('click', checkChoice)        
     }); 
 }
 
 function checkChoice() {  
     // console.log(this.value);          
     if (this.value == currentQuestion.answer) {
-        // amountCorrect ++;
-        amountCorrect = amountCorrect + 1;
-        answerElement.innerHTML = correctHTML;
-        console.log("e-click" + amountCorrect);
-                        
+        amountCorrect ++;        
+        answerElement.innerHTML = correctHTML;                            
     } else {
         answerElement.innerHTML = incorrectHTML;                
     };
@@ -140,7 +99,7 @@ function checkChoice() {
     reset(choiceElement2);
     reset(choiceElement3);
     reset(choiceElement4);    
-    console.log("after e-click" + amountCorrect);
+    
 }
 
 function getNewQuestion(questions) {
@@ -159,7 +118,7 @@ const reset = (a) => {              //pass in element, clear html
  
 function startGame() {    
     myQuestions = [...questions];  //create a copy of questions array, not a pointer to array
-    console.log("start game " + amountCorrect);
+    // console.log("start game " + amountCorrect);
     amountCorrect = 0;
     totalAnswered = questions.length;
     getNewQuestion(myQuestions);   //is this where I want to call this function?
@@ -178,14 +137,10 @@ document.getElementById('btnStart').addEventListener('click', () => {
 //next gets the next question in the array of reformatted questions.
 document.getElementById('btnNext').addEventListener('click', () => {
     if (myQuestions.length > 0) {
-        console.log(myQuestions.length);
-        console.log(amountCorrect, totalAnswered);
         getNewQuestion(myQuestions);
         displayQuestions(currentQuestion);
         reset(resultsElement);
-    } else {
-        console.log(myQuestions.length);
-        // console.log(amountCorrect, totalAnswered);
+    } else {        
         resultsElement.innerHTML = `<h2>Total Correct: ${amountCorrect} out of ${totalAnswered}</h2>`;
     }
 });
