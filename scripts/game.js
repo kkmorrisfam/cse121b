@@ -80,22 +80,20 @@ function displayQuestions(currentQuestion) {
     choiceElement2.innerHTML = `<p>${currentQuestion.option2}`;
     choiceElement3.innerHTML = `<p>${currentQuestion.option3}`;
     choiceElement4.innerHTML = `<p>${currentQuestion.option4}`;
-    // console.log(currentQuestion);
 
-//     Array.from(buttonsCollection).forEach( (button) => {            //add buttonsCollection.children  ??
-//         // let buttonElement = document.querySelector(button);
+}
+
+// function getChoice() {
+//     Array.from(buttonsCollection).forEach( (button) => {           
 //         console.log("forEach" + amountCorrect);
 
-// /* try, add buttonsCollection.children
-// try separating the if statement and*/
-
-//         // console.log(buttonElement);
 //         console.log(button);
         
 //         button.addEventListener('click', function() {  
 //             // console.log(this.value);          
 //             if (this.value == currentQuestion.answer) {
-//                 amountCorrect ++;
+//                 // amountCorrect ++;
+//                 amountCorrect = amountCorrect + 1;
 //                 answerElement.innerHTML = correctHTML;
 //                 console.log("e-click" + amountCorrect);
                                 
@@ -112,40 +110,39 @@ function displayQuestions(currentQuestion) {
 //         });
 //         console.log("after e-click" + amountCorrect);
 //     }); 
-}
+// }
 
 function getChoice() {
-    Array.from(buttonsCollection).forEach( (button) => {            //add buttonsCollection.children  ??
-        // let buttonElement = document.querySelector(button);
+    Array.from(buttonsCollection).forEach( (button) => {           
         console.log("forEach" + amountCorrect);
 
-/* try, add buttonsCollection.children
-try separating the if statement and*/
-
-        // console.log(buttonElement);
         console.log(button);
         
-        button.addEventListener('click', function() {  
-            // console.log(this.value);          
-            if (this.value == currentQuestion.answer) {
-                amountCorrect ++;
-                answerElement.innerHTML = correctHTML;
-                console.log("e-click" + amountCorrect);
-                                
-            } else {
-                answerElement.innerHTML = incorrectHTML;                
-            };
-            
-            //not the best option, but works for now
-            reset(choiceElement1);
-            reset(choiceElement2);
-            reset(choiceElement3);
-            reset(choiceElement4);
-            
-        });
-        console.log("after e-click" + amountCorrect);
+        button.addEventListener('click', checkChoice) 
+        
     }); 
 }
+
+function checkChoice() {  
+    // console.log(this.value);          
+    if (this.value == currentQuestion.answer) {
+        // amountCorrect ++;
+        amountCorrect = amountCorrect + 1;
+        answerElement.innerHTML = correctHTML;
+        console.log("e-click" + amountCorrect);
+                        
+    } else {
+        answerElement.innerHTML = incorrectHTML;                
+    };
+    
+    //not the best option, but works for now
+    reset(choiceElement1);
+    reset(choiceElement2);
+    reset(choiceElement3);
+    reset(choiceElement4);    
+    console.log("after e-click" + amountCorrect);
+}
+
 function getNewQuestion(questions) {
     
     const questionIndex = Math.floor(Math.random() * questions.length);
@@ -175,7 +172,7 @@ function startGame() {
 // displayQuestions(questions);
 //start gets a whole new set of questions
 document.getElementById('btnStart').addEventListener('click', () => {
-    getTrivia(url);
+    getTrivia(url);   //get new questions, which then starts new game
     reset(resultsElement);
 });
 //next gets the next question in the array of reformatted questions.
@@ -185,6 +182,7 @@ document.getElementById('btnNext').addEventListener('click', () => {
         console.log(amountCorrect, totalAnswered);
         getNewQuestion(myQuestions);
         displayQuestions(currentQuestion);
+        reset(resultsElement);
     } else {
         console.log(myQuestions.length);
         // console.log(amountCorrect, totalAnswered);
