@@ -82,9 +82,48 @@ function displayQuestions(currentQuestion) {
     choiceElement4.innerHTML = `<p>${currentQuestion.option4}`;
     // console.log(currentQuestion);
 
-    Array.from(buttonsCollection).forEach( (button) => {
-        let buttonElement = document.querySelector(button.button);
+//     Array.from(buttonsCollection).forEach( (button) => {            //add buttonsCollection.children  ??
+//         // let buttonElement = document.querySelector(button);
+//         console.log("forEach" + amountCorrect);
+
+// /* try, add buttonsCollection.children
+// try separating the if statement and*/
+
+//         // console.log(buttonElement);
+//         console.log(button);
+        
+//         button.addEventListener('click', function() {  
+//             // console.log(this.value);          
+//             if (this.value == currentQuestion.answer) {
+//                 amountCorrect ++;
+//                 answerElement.innerHTML = correctHTML;
+//                 console.log("e-click" + amountCorrect);
+                                
+//             } else {
+//                 answerElement.innerHTML = incorrectHTML;                
+//             };
+            
+//             //not the best option, but works for now
+//             reset(choiceElement1);
+//             reset(choiceElement2);
+//             reset(choiceElement3);
+//             reset(choiceElement4);
+            
+//         });
+//         console.log("after e-click" + amountCorrect);
+//     }); 
+}
+
+function getChoice() {
+    Array.from(buttonsCollection).forEach( (button) => {            //add buttonsCollection.children  ??
+        // let buttonElement = document.querySelector(button);
         console.log("forEach" + amountCorrect);
+
+/* try, add buttonsCollection.children
+try separating the if statement and*/
+
+        // console.log(buttonElement);
+        console.log(button);
         
         button.addEventListener('click', function() {  
             // console.log(this.value);          
@@ -107,7 +146,6 @@ function displayQuestions(currentQuestion) {
         console.log("after e-click" + amountCorrect);
     }); 
 }
-
 function getNewQuestion(questions) {
     
     const questionIndex = Math.floor(Math.random() * questions.length);
@@ -129,6 +167,7 @@ function startGame() {
     totalAnswered = questions.length;
     getNewQuestion(myQuestions);   //is this where I want to call this function?
     displayQuestions(currentQuestion);
+    getChoice();
 
 }
 

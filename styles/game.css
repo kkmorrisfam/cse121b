@@ -1,10 +1,16 @@
+* {
+    box-sizing: border-box;
+    margin: auto;
+  }
+
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
 }
 
 h1, h2 {
     text-align: center;
-    margin:1rem 0 .5rem;
+    /* margin:1rem 0 .5rem; */
 }
 
 div {
@@ -18,7 +24,7 @@ div #container {
     max-width: 80%;
 }
 div #header {
-    display: block;
+    /* display: block; */
     color:lightblue;
 
 }
@@ -36,7 +42,7 @@ div .answers {
 }
 
 div #announce {
-    display:flexbox;    
+    /* display:flexbox;     */
 }
 
 
@@ -71,6 +77,6 @@ div #announce {
     align-content: center;
 }
 
-/* .button-answer {
-
-} */
+.button-answer {
+    padding:12px 37px;
+}
